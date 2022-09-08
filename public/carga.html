@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Con el alma en las manos | Carga</title>
+
+        <link rel="icon" href="./images/Logo2.PNG">
+
+            
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+       <!---------------------- Bootstrap ---------------------->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+        crossorigin="anonymous">
+
+        <!-- JS, jQuery y Poppers-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+        crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="./style-carga.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./style2.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <img src="./images/Logo_completo_2.PNG" class="logo">   
+                <a class="Titulo-nav ml-2" href="./index.html" ><b>Con el alma en las manos</b></a>   
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                        <a class="nav-link"href="#"><button id="signOut" style="all: unset;" class="text-violet">Volver a inicio</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <section id="inicio">
+        <duv class="container">
+            <div class="content-center">
+                <h1 class="mt-5" style="color: #FF0080;"> Sistema de administración <span class="typed-words"></span></h1>
+            </div>
+        </duv>
+    </section>
+
+      <section style="background-color:white;">
+        <div class="data" style="margin-bottom: 2em;">
+            <div class="main-div">
+                <form class="text-violet">
+                        <label for="tipo" style="font-size: x-large;">Seleccione el tipo:</label>
+                        <select id="tipo" name="Seleccione el tipo de carga">
+                            <option value="CursoTaller">Curso/taller</option>
+                            <option value="Terapia">Terapia</option>
+                        </select><br> 
+                        <label for="imagen" style="font-size: x-large;">Seleccione una imagen:</label><br>
+                        <input type="file" accept="image/*" id="imagen"><br>
+                        <label for="titulo"style="font-size: x-large;">Título:</label><br>
+                        <input type="text" id="titulo"><br>
+                        <label for="descripcion" style="font-size: x-large;" >Descripción:</label><br>
+                        <input type="text" id="descripcion"><br>
+                        <label for="dias-horarios"  style="font-size: x-large;">Días y horarios:</label><br>
+                        <input type="text" id="dias-horarios"><br>
+                        <label for="precio" style="font-size: x-large;">Precio:</label><br>
+                        <input type="text" id="precio"><br>
+                    </span>
+                </form>
+                <button type="button" class="btn btn-danger col-sm-4" style="font-size: large;" id="boton_escritura">Cargar Datos</button>
+                <label for="boton_escritura" id="porcentaje_carga"></label>
+            </div>
+        </div>
+
+
+    
+        <div class="row text-center titulo_listado text-violet">
+            <div class="col-sm-1" style="font-size: large;">Imagen</div>
+            <div class="col-sm-1" style="font-size: large;">Tipo</div>
+            <div class="col-sm-1" style="font-size: large;">Titulo</div>
+            <div class="col-sm-4 " style="font-size: large;">Descripción</div>
+            <div class="col-sm-2 " style="font-size: large;">Días y horarios</div>
+            <div class="col-sm-1 " style="font-size: large;">Precio</div>
+            <div class="col-sm-2k" style="font-size: large;">¿Qué hacer?</div>
+        </div>
+        <hr class="separadores_hr">
+    </div>
+
+        <div class="row text-center titulo_listado" id="columna_coleccion"></div>
+    </section> 
+        <!-- Voy a armar un grafico de la informacion con una API de Google que se llama Google Charts -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <div id="chart_div"></div>
+
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+
+        <script src="./js/carga.js"></script>        
+    </body>
+    <script src="js/typed.js"></script>
+    <script>
+        var typed = new Typed('.typed-words', {
+        strings: ["(publicaciones al inicio de la página)"],
+        typeSpeed: 80,
+        backSpeed: 80,
+        backDelay: 4000,
+        startDelay: 1000,
+        loop: false,
+        showCursor: true
+        });
+    </script>
+    
+</html><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "Error";
+                 }
+                 </script>
+                 </html>

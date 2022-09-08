@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Milton Fernández">
+    <meta name="description" content="Blog personal">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Animation -->
+    <script src = "js/scrollreveal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet">
+
+    <!-- Ionic icons-->
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Icono -->
+    <link rel="icon" href="./images/Logo2.PNG">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JS, jQuery y Poppers-->
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+    crossorigin="anonymous"></script>
+
+    <title>Con el alma en las manos</title>
+</head>
+
+<!--------------------------------------------------navbar--------------------------------------------------------------->
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        
+      <img src="./images/Logo_completo_2.PNG" class="logo">   
+      <a class="Titulo-nav ml-2" href="./index.html" ><b>Con el alma en las manos</b></a>  
+
+        <button class="navbar-toggler text-pink" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <ion-icon name="menu-outline" style="font-size: xx-large" ></ion-icon>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="./contacto.html"><b>Contacto</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="./login.html">Ingresar</a>
+                </li>
+        </div>
+    </div>
+</nav>
+<!--------------------------------------------------Fin navbar----------------------------------------------------------->
+
+<!--------------------------------------------------Encabezado----------------------------------------------------------->
+
+    <section id="inicio" id="Contacto">
+        <duv class="container">
+            <div class="content-center">
+                <h1 class="mt-5" style="color: white">Ponete en contacto con nosotros <span class="typed-words"></span></h1>
+            </div>
+        </duv>
+    </section>
+<!--------------------------------------------------Encabezado----------------------------------------------------------->
+<section class="contacto">
+<div data-aos="fade-up" data-aos-duration="2000">
+  <div class="bgLightPink">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mb-5">
+
+            <form action="/public/mensaje-enviado.html" class="p-5 bg-white" style="margin-top: -150px;" data-netlify="true">
+
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">Nombre</label>
+                  <input type="text" name="nombre" id="nombre" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Apellido</label>
+                  <input type="text" name="apellido" id="apellido" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label> 
+                  <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Asunto</label> 
+                  <input type="subject" id="asunto" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Mensaje</label> 
+                  <textarea name="mensaje" id="message" cols="30" rows="7" class="form-control" placeholder="Escribí tu mensaje aquí" required></textarea>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Enviar mensaje" class="btn btn-pill btn-dark btn-md text-white">
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="col-md-5">
+            
+            <div class="p-4 mb-3 bg-white">
+              <p class="text-dark" style="font-size: large;"><b>Facebook</b></p>
+              <p class="mb-4 text-pink" style="font-size: large;"> 
+                <a href="https://www.facebook.com/Con-el-alma-en-las-manos-414624345630393/?ref=page_internal" target="_blank">
+                  Con el alma en las manos</a></p>
+
+              <p class="text-dark" style="font-size: large;"><b>Celular</b</p>
+              <p class="text-violet" style="font-size: large;"> <a href="https://api.whatsapp.com/send?phone=+54 11 5826-7663" target="_blank" >+54 11 5826-7663</a></p>
+
+              <p class="text-dark" style="font-size: large;"><b>Email</b></p>
+              <p class="text-violet" style="font-size: large;">miryansalvatierra2507
+                                                               @hotmail.com</a></p>
+            </div>
+          </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!----------------------------------------------------Javascript------------------------------------------------------------->
+
+  <script src="js/scrollreveal.js"></script>
+  <script src="js/scroll.js"></script>
+
+  <script src="js/typed.js"></script>
+  
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="js/typed.js"></script>
+    <script>
+    var typed = new Typed('.typed-words', {
+    strings: ["ante cualquier duda"],
+    typeSpeed: 80,
+    backSpeed: 80,
+    backDelay: 4000,
+    startDelay: 1000,
+    loop: false,
+    showCursor: true
+    });
+    </script>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>  <!-- Incluyo para usar los iconos -->
+
+</body>
+</html>

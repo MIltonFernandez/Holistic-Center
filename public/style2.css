@@ -1,0 +1,46 @@
+
+  .block-quick-info-2 .block-quick-info-2-inner {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    background: #fbdcdb;
+    margin-top: -80px;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .block-quick-info-2 .quick-info-2 .icon {
+    font-size: 3rem;
+    color: #b3b3b3;
+    color: #cb4597;
+  }
+  
+  .block-quick-info-2 .quick-info-2 .text .heading {
+    color: #000;
+    font-weight: 300;
+  }
+  
+  .block-quick-info-2 .quick-info-2 .text .excerpt {
+    color: #b3b3b3;
+  }
+
+  .typed-words {
+    color: #cb4597;
+  }
+
+  .btn-pill {
+    border-radius: 30px;
+  }
+
+  a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a { color: #cb4597; } /* CSS link color */
+  a:hover {color: #ab3484}

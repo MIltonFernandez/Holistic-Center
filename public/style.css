@@ -1,0 +1,184 @@
+:root {
+  --dark-color: #1a1a1a;
+  --white-color: #ffffff;
+  --light-grey-color: #f5f5f5;
+  --gold-color: #ffb944;
+  --primary-color: #3a4052;
+  --pink: #ea728c;
+  --violet:#cb4597;
+  --light-pink: #fbdcdb;
+}
+.body{
+  background-color: #fbdcdb;
+}
+.text-light{
+  color: var(--white-color);
+}
+
+.text-light-grey{
+  color: var(--light-grey-color);
+}
+
+.text-violet{
+  color: var(--violet);
+}
+
+
+.text-pink{
+  color: var(--pink);
+}
+
+.text-dark-blue{
+  color: var(--primary-color);
+}
+
+.text-dark{
+  color: var(--dark-color);
+}
+
+.logo{         /*(común) Imagen icono nav */
+  height: 120px;
+  padding-bottom: .5em;
+
+}
+
+.Titulo-nav{
+  font-size: x-large;
+  color: #cb4597;
+}
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.bgDark { background-color: var(--dark-color); }
+.bgLight { background-color: var(--white-color); }
+.bgLightGrey { background-color: var(--light-grey-color); }
+.bgLightPink { background-color: var(--light-pink); }
+
+.colorDark { color: var(--dark-color) !important; }
+
+h1 { font-size: 66px; font-weight: 700; line-height: 80px; }
+h2 { font-size: 48px; margin-bottom: 30px; }
+h3 { font-size: 33px; }
+h5 { margin-bottom: 0px; }
+
+a:hover { text-decoration: none; }
+
+.btn {
+  font-size: 14px;
+  padding: 15px 26px;
+  min-width: 160px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border: 2px solid var(--dark-color);
+}
+
+.btn-secondary {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+}
+
+.btn-alternate {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border: 2px solid var(--white-color);
+}
+
+.btn-primary:hover { background-color: var(--dark-color); border: 2px solid var(--dark-color); }
+.btn-secondary:hover { background-color: var(--white-color); color: var(--dark-color); border: 2px solid var(--white-color); }
+.btn-secondary:focus { background-color: var(--white-color) !important; outline: none; border: 2px solid var(--white-color) !important; box-shadow: none; }
+
+.nav-link{
+  font-size: large;
+}
+section { padding: 120px 0; }
+
+.divider { border-bottom: 2px solid var(--light-grey-color); }
+
+.content-center {
+  max-width: 800px; 
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-control {
+  font-size: 14px;
+  border: 1px solid #cacaca;
+  padding: 15px;
+  border-radius: 2px;
+}
+
+.form-control:focus {
+  border: 1px solid var(--dark-color);
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar {
+  background-color: #fbdcdb;
+  min-height: 50px;
+}
+
+.nav-link { color: var(--light-grey-color); }
+.nav-link:hover { color: var(--light-grey-color); }
+
+.navbar-toggler { font-size: 40px;} /*tamaño del icono*/
+.navbar-toggler:focus { outline: none; } /*para que no se vea el recuadro naranja cuando alguien le da click*/
+
+/* //////////////
+ Inicio
+//////////////*/
+
+#inicio {
+  background-image: url(./images/yoga.jpg);
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 100vh;
+}
+
+/* //////////////
+ Media queries
+//////////////*/
+
+@media (max-width: 575.98px) { 
+  h1 { font-size: 40px; line-height: normal; }
+  .portfolio-details h2 { font-size: 32px; }
+  .plans { min-width: unset; padding: 40px; }
+  .Titulo-nav{display: none !important;}
+  .seccion_inicio {display:none !important;}
+  .contacto{width: 360px;}
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+ }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .portfolio-details h2 { font-size: 30px; }
+  .plans { min-width: unset; padding: 40px 20px;}
+  .seccion_inicio {display:none !important;}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+
+@media (min-width: 1200px) { }

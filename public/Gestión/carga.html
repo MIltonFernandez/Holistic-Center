@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2016 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Centro Holistico Carga</title>
+
+	<link rel="icon" href="">
+    
+    <!-- JS, jQuery y Poppers-->
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+    crossorigin="anonymous"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">Centro Holistico Carga</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+                <li>
+				<a class="nav-link"><button id="signOut" style="all: unset;">Cerrar Sesión</button></a>
+				</li>
+			</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="card text-white bg-dark tarjeta">
+		<h5 class="card-header">Subir un archivo</h5>
+		<div class="card-body">
+		  	<h5 class="card-title">Seleccione un archivo aqui abajo. Una vez que el archivo se haya subido, se podrá visualizar
+				el link debajo.</h5>
+		  	<p class="card-text">Seleccione un archivo</p>
+		  	<input type="file" id="file" name="file"/>
+		  	<h6>URL del archivo:</h6>
+			<span id="linkbox"></span>
+		</div>
+	  </div>
+	<!--
+	  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<main class="mdl-layout__content mdl-color--grey-100">
+			<div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+
+				!-- Container for the demo --
+				<div
+					class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+					<div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+						<h2 class="mdl-card__title-text">Subir un archivo</h2>
+					</div>
+					<div class="mdl-card__supporting-text mdl-color-text--grey-600" id="messagesDiv">
+						<p>Seleccione un archivo aqui abajo. Una vez que el archivo se haya subido, se podrá visualizar
+							el link debajo.</p>
+						<h6>Seleccione un archivo</h6>
+						<input type="file" id="file" name="file" />
+						<h6>URL del archivo:</h6>
+						<span id="linkbox"></span>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div> -->
+
+
+	<!-- 	
+	Debemos importar y configurar el SDK de Firebase. 
+	Si hosteamos nuestra pagina con Firebase Hosting, estos archivos ya estarán disponibles dentro de nuestro 
+	servidor. De esta forma podrémos usarlos con una direccion relativa. 
+	Si nuestra pagina no esta hosteada dentro de Firebase, debemos hacerlo como vimos la clase anterior
+ -->
+
+	<!-- Ejemplo desde la CND
+ <body>
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+  </body>
+-->
+<!-- 1* ¿Por qué colocamos los archivos js en el final del body y no en la cabecera? -->
+    <!-- Si seguimos la recomendación de colocar los arhivos js en la cabecera del documento una
+    situación debe ser considerada. El código del documento es leído de forma secuencial por el 
+    navegador de manera que no podemos referenciar una elemento que todavía no haya sido creado. -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+
+
+	<!-- Y luego importamos nuestro script, que, seguramente, utilice los productos de Firebase. -->
+	<script src="carga.js"></script>
+</body>
+</html><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+    <script type="text/javascript">
+     var gearPage = document.getElementById('GearPage');
+     if(null != gearPage)
+     {
+         gearPage.parentNode.removeChild(gearPage);
+         document.title = "Error";
+     }
+     </script>
+     </html>

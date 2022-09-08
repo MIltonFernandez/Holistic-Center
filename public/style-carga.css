@@ -1,0 +1,132 @@
+
+:root{
+    --main-bg-color: rgb(41, 80, 109);
+    --main-bg-color-a: rgba(4, 32, 55, 0.7);
+    --icon-color: rgb(4, 32, 55);
+    --ejemplo: #8bae60;
+}
+
+head, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+.main-div, .loggedin-div {
+    width: 60%;
+    margin: 0px auto;
+    margin-top: 0px;
+    padding: 20px;
+  }
+
+  .main-div input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .main-div input:focus {
+    border: 1px solid #777;
+  }
+  
+
+.separadores_hr{
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    border-color: #ea728c;
+}
+
+.login {
+    display: flex;
+    height: 85vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario {
+    padding: 4rem;
+    border: 2px solid white;  
+    border-radius: 2rem;
+}
+
+.formulario label{
+    width: 25rem;
+}
+
+.formulario input{
+    width: 25rem;
+    border: 1px solid white;
+    color: white;
+    background-color: #212121;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+.formulario_db{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formulario_db input{
+    border: 1px solid white;
+    color: white;
+    background-color: #212121;
+    border-radius: .5rem;
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.entrada{
+    margin-left: 1rem;
+}
+
+.lbl_total{
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.titulo_listado{
+    margin: 0;
+}
+
+
+.boton-borrar{
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+.boton-update{
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.elementos_listado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}

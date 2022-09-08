@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+:root{
+    --main-bg-color: rgb(41, 80, 109);
+    --main-bg-color-a: rgba(4, 32, 55, 0.7);
+    --icon-color: rgb(4, 32, 55);
+    --ejemplo: #8bae60;
+}
+
+head, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: "Yanone Kaffeesatz"; */
+    font-size: medium;
+    color: white;
+    background-color: #212121;
+}
+
+.login {
+    display: flex;
+    height: 85vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario {
+    padding: 4rem;
+    border: 2px solid white;  
+    border-radius: 2rem;
+}
+
+.formulario label{
+    width: 25rem;
+}
+
+.formulario input{
+    width: 25rem;
+    border: 1px solid white;
+    color: white;
+    background-color: #212121;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    margin: .5rem;
+}
+
+.btn-success{
+    width: 10rem;
+    margin-left: 1rem;
+}
